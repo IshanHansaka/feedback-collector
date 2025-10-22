@@ -1,4 +1,4 @@
-import { Feedback, IFeedback } from '../models/Feedback.model';
+import { Feedback, IFeedback } from '../models/feedback.model';
 
 export const FeedbackService = {
   async getAll(): Promise<IFeedback[]> {
