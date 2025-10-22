@@ -23,13 +23,19 @@ const FeedbackList: React.FC<Props> = ({ feedbacks, loading }) => {
               key={f._id}
               className="border border-gray-200 rounded-xl p-4 bg-white shadow-sm hover:shadow-md transition"
             >
-              <p className="font-semibold text-gray-800">{f.name}</p>
-              <p className="text-gray-600 mt-1">{f.message}</p>
-              <small className="text-gray-400">
+              <p className="font-semibold text-gray-800 text-xl">{f.name}</p>
+              <p className="text-gray-600 mt-1 text-lg">{f.message}</p>
+                <small className="text-gray-400 text-xs">
                 {f.createdAt
-                  ? new Date(f.createdAt).toLocaleString()
+                  ? new Date(f.createdAt).toLocaleString(undefined, {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  })
                   : 'Just now'}
-              </small>
+                </small>
             </li>
           ))}
         </ul>

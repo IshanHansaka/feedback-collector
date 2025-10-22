@@ -40,7 +40,7 @@ const FeedbackForm: React.FC<Props> = ({ onSubmit }) => {
         value={form.name}
         onChange={handleChange}
         placeholder="Your Name"
-        className="w-full border rounded-lg p-2 mb-3 text-gray-900"
+        className="w-full border rounded-lg p-2 mb-3 text-gray-600"
         required
       />
 
@@ -49,7 +49,7 @@ const FeedbackForm: React.FC<Props> = ({ onSubmit }) => {
         value={form.message}
         onChange={handleChange}
         placeholder="Your Feedback"
-        className="w-full border rounded-lg p-2 mb-3 text-gray-900"
+        className="w-full border rounded-lg p-2 mb-3 text-gray-600"
         rows={4}
         required
       ></textarea>
@@ -57,7 +57,7 @@ const FeedbackForm: React.FC<Props> = ({ onSubmit }) => {
       <button
         type="submit"
         disabled={submitting}
-        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+        className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
       >
         {submitting ? 'Submitting...' : 'Submit'}
       </button>
